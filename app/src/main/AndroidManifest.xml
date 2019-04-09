@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="cn.itcast.mobliesafe">
+<uses-permission android:name="android.permission.SEND_SMS"/>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <receiver android:name=".chapter02.dialog.reciever.BootCompleteReciever">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name=".chartper01.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".HomeActivity"/>
+        <activity android:name=".chapter02.dialog.LostFindActivity"/>
+        <activity android:name=".chapter02.dialog.SetUp1Activity"/>
+        <activity android:name=".chapter02.dialog.SetUp2Activity">
+        </activity>
+        <activity android:name=".chapter02.dialog.SetUp3Activity">
+        </activity>
+        <activity android:name=".chapter02.dialog.SetUp4Activity">
+        </activity>
+        <!--<activity android:name=".chapter02.dialog.BaseSetUpActivity">-->
+        <!--</activity>-->
+    </application>
+
+</manifest>
